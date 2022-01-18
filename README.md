@@ -205,3 +205,9 @@ death) and cerebral oxygenation as measured by NIRS.
 - Methods to compare qEEG features between preterm singletons and twins.
 - code: [github | R and Matlab code](https://github.com/otoolej/preterm_twins_EEG)
 - paper: [Lloyd et al., J Clin Neurphys, 2021](https://doi.org/10.1097/WNP.0000000000000645)
+
+
+---
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+
