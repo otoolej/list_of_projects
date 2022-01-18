@@ -1,6 +1,14 @@
-# :sparkles: Directory of Neonatal EEG algorithms and Generic Signal-Processing Tools :tada: :rocket:
+# :sparkles: Directory of Projects
+## Algorithms for Neonatal EEG (+ NIRS), Signal Processing Tools, Machine Learning Methods, and More
 
-Directory of repositories on [Github](https://github.com/otoolej/)
+
+Directory of repositories on this [Github page](https://github.com/otoolej/). :octocat:
+
+Computer code for analysing neurophysiological signals :brain:, including EEG and NIRS,
+recorded from infants in the neonatal intensive care unit. :baby: :hospital: 
+
+Also includes code for generic signal processing tools (such as time--frequency analysis)
+and machine learning tools.
 
 ___
 
@@ -17,16 +25,16 @@ ___
         - [Term EEG (in trace alternant activity)](#term-eeg-in-trace-alternant-activity)
     - [Burst Detector](#burst-detector)
         - [Preterm EEG](#preterm-eeg-1)
-- [Tools for Time--Frequency Signal Analysis](#tools-for-time--frequency-signal-analysis)
-    - [Fast and Memory Efficient Algorithms for Computing Time--Frequency Distributions (TFD)](#fast-and-memory-efficient-algorithms-for-computing-time--frequency-distributions-tfd)
-    - [Methods to Estimate the Instantaneous Frequency from TFDs](#methods-to-estimate-the-instantaneous-frequency-from-tfds)
-- [Tools for Connectivity](#tools-for-connectivity)
-    - [Features of Nonstationary Directional Coupling](#features-of-nonstationary-directional-coupling)
 - [Near Infraread Spectroscopy (NIRS)](#near-infraread-spectroscopy-nirs)
     - [Synthetic NIRS signals](#synthetic-nirs-signals)
     - [Method to extract transient components from NIRS signal](#method-to-extract-transient-components-from-nirs-signal)
 - [Heart Rate Variability (HRV)](#heart-rate-variability-hrv)
     - [Standard features of HRV](#standard-features-of-hrv)
+- [Tools for Time--Frequency Signal Analysis](#tools-for-time--frequency-signal-analysis)
+    - [Fast and Memory Efficient Algorithms for Computing Time--Frequency Distributions (TFD)](#fast-and-memory-efficient-algorithms-for-computing-time--frequency-distributions-tfd)
+    - [Methods to Estimate the Instantaneous Frequency from TFDs](#methods-to-estimate-the-instantaneous-frequency-from-tfds)
+- [Tools for Connectivity](#tools-for-connectivity)
+    - [Features of Nonstationary Directional Coupling](#features-of-nonstationary-directional-coupling)
 - [Signal-Processing and Machine-learning Tools](#signal-processing-and-machine-learning-tools)
     - [Random Convolution Kernels with Multiscale Decomposition](#random-convolution-kernels-with-multiscale-decomposition)
     - [Mutual information estimates](#mutual-information-estimates)
@@ -44,10 +52,10 @@ ___
 
 # Quantitative EEG (qEEG)
 ## NEURAL -- a neonatal EEG feature set in Matlab (and Python)
-- Curated set of quantitative features for neonatal EEG
-- Clearly defined features (description and code)
+- Curated set of quantitative features for neonatal EEG.
+- Clearly defined features (full description and accompanying code).
 - code: [github (Matlab version)](https://github.com/otoolej/qEEG_feature_set)
-- code: [github (Python version)](https://github.com/BrianMur92/NEURAL_py_EEG_feature_set)
+- code: [github @BrianMur92 (Python version)](https://github.com/BrianMur92/NEURAL_py_EEG_feature_set)
 - paper (preprint): [arXiv:1704.05694](https://arxiv.org/abs/1704.05694)
 
 ___
@@ -57,32 +65,53 @@ ___
 ## Inter-Burst Detector 
 ### Preterm EEG 
 #### Method: features + SVM
-- Machine learning method to detect inter-burst intervals in preterm EEG
-- Developed and tested on a cohort of infants <30 weeks gestational age
+- Machine learning method to detect inter-burst intervals in preterm EEG.
+- Developed and tested on a cohort of infants <30 weeks gestational age.
 - code: [github | Python version](https://github.com/otoolej/py_burst_detector)
 - code: [github | Matlab version](https://github.com/otoolej/burst_detector)
 - paper: [O'Toole et al., Med Eng Phys, 2017](https://doi.org/10.1016/j.medengphy.2017.04.003)
 
 #### Method: single feature 
-- Generic method to detect bursts: high-amplitude coupled with high-frequency 
-- Includes envelope derivative operator (EDO) and nonlinear energy operator (NLEO)
+- Generic method to detect bursts: high-amplitude coupled with high-frequency.
+- Includes envelope derivative operator (EDO) and nonlinear energy operator (NLEO).
 - code: [github | Matlab version](https://github.com/otoolej/nonlinear-energy-operators)
 - code: [github | Python version](https://github.com/otoolej/envelope_derivative_operator)
 - paper: [O'Toole et al., EMBC-2014](https://doi.org/10.1109/EMBC.2014.6944325)
 
 
 ### Term EEG (in trace alternant activity)
-- Machine learning method to detect bursts and inter-bursts in term EEG during Quiet Sleep
-- Trained and tested on a cohort of healthy, normal newborns
-- code: [github | Matlab code](https://github.com/sumitraurale/interburst_detector)
+- Machine learning method to detect bursts and inter-bursts in term EEG during Quiet Sleep.
+- Trained and tested on a cohort of healthy, normal newborns.
+- code: [github @sumitraurale | Matlab code](https://github.com/sumitraurale/interburst_detector)
 - paper: [Raurale et al., EMBC-2020](https://doi.org/10.1109/EMBC44109.2020.9176147)
 
 
 ## Burst Detector 
 ### Preterm EEG
-- Method to detect short-duration bursts of activity in preterm (<30 weeks GA) EEG
-- code: [github | Python code](https://github.com/BrianMur92/Preterm_transient_burst_detector)
+- Method to detect short-duration bursts of activity in preterm (<30 weeks GA) EEG.
+- code: [github @BrianMur92 | Python code](https://github.com/BrianMur92/Preterm_transient_burst_detector)
 - paper: [Murphy et al., EMBC-2020](https://doi.org/10.1109/EMBC44109.2020.9175154)
+
+___
+
+# Near Infraread Spectroscopy (NIRS)
+## Synthetic NIRS signals
+- Generates cerebral oxygenation-like signals (rcSO2).
+- code: [github | Matlab code](https://github.com/otoolej/synth_NIRS_signals)
+- papers: [O'Toole et al., EMBC-2018](https://doi.org/10.1109/EMBC.2018.8513523) and
+ [Ashoori et al., EMBC-2021](https://doi.org/10.1109/EMBC46164.2021.9630560)
+
+## Method to extract transient components from NIRS signal
+- Method to extract sparse, transient-like signals from the cerebral oxygenation signals.
+- Method is based on singular spectral analysis and signal rotation using the cosine transform.
+- code: [github | Matlab code](https://github.com/otoolej/transient_decomp_ssa)
+- paper: [Ashoori et al., EMBC-2021](https://doi.org/10.1109/EMBC46164.2021.9630560)
+
+# Heart Rate Variability (HRV)
+## Standard features of HRV
+- Generates some standard features (e.g. spectral power ratios) of HRV.
+- code: [github | Matlab code](https://github.com/otoolej/hrv_features_neonates)
+- papers (e.g.): [Garvey et al., Pediatric Research, 2021](https://doi.org/10.1038/s41390-021-01412-x)
 
 ___
 
@@ -111,6 +140,7 @@ long-duration signals.
   [McAulay and Quatieri, 1986](https://doi.org/10.1109/TASSP.1986.1164910); also see list
   of references in [github page](https://github.com/otoolej/time_frequency_tracks#references).
 
+___
 
 # Tools for Connectivity
 ## Features of Nonstationary Directional Coupling
@@ -119,27 +149,6 @@ long-duration signals.
 - Also includes a 2D fractal dimension measure.
 - code: [github | Matlab code](https://github.com/otoolej/nonstat_directional_coupling)
 - paper: [O'Toole et al., Physiological Measurement, 2021](https://doi.org/10.1088/1361-6579/abe3de)
-
-___
-
-# Near Infraread Spectroscopy (NIRS)
-## Synthetic NIRS signals
-- Generates cerebral oxygenation-like signals (rcSO2).
-- code: [github | Matlab code](https://github.com/otoolej/synth_NIRS_signals)
-- papers: [O'Toole et al., EMBC-2018](https://doi.org/10.1109/EMBC.2018.8513523) and
- [Ashoori et al., EMBC-2021](https://doi.org/10.1109/EMBC46164.2021.9630560)
-
-## Method to extract transient components from NIRS signal
-- Method to extract sparse, transient-like signals from the cerebral oxygenation signals.
-- Method is based on singular spectral analysis and signal rotation using the cosine transform.
-- code: [github | Matlab code](https://github.com/otoolej/transient_decomp_ssa)
-- paper: [Ashoori et al., EMBC-2021](https://doi.org/10.1109/EMBC46164.2021.9630560)
-
-# Heart Rate Variability (HRV)
-## Standard features of HRV
-- Generates some standard features (e.g. spectral power ratios) of HRV.
-- code: [github | Matlab code](https://github.com/otoolej/hrv_features_neonates)
-- papers (e.g.): [Garvey et al., Pediatric Research, 2021](https://doi.org/10.1038/s41390-021-01412-x)
 
 ___
 
@@ -158,9 +167,8 @@ ___
 - paper: [Kraskov et al., 2004](https://doi.org/10.1103/PhysRevE.69.066138) and [Ross 2014](https://doi.org/10.1371/journal.pone.0087357).
 
 
-
 ## Envelope--Derivative Operator
-- A frequency-weighted energy operator (also used as burst-detector in above)
+- A frequency-weighted energy operator (also used as burst-detector).
 - code: [github | Matlab version](https://github.com/otoolej/nonlinear-energy-operators)
 - code: [github | Python version](https://github.com/otoolej/envelope_derivative_operator)
 - paper: [O'Toole et al., EMBC-2014](https://doi.org/10.1109/EMBC.2014.6944325)
@@ -194,6 +202,6 @@ death) and cerebral oxygenation as measured by NIRS.
 - paper: [DOI: 10.1038/s41598-019-41227-9](https://doi.org/10.1038/s41598-019-41227-9)
 
 ## EEG concordance in preterm twins
-- Methods to compare qEEG features between singletons and twins preterm newborns.
+- Methods to compare qEEG features between preterm singletons and twins.
 - code: [github | R and Matlab code](https://github.com/otoolej/preterm_twins_EEG)
 - paper: [Lloyd et al., J Clin Neurphys, 2021](https://doi.org/10.1097/WNP.0000000000000645)
